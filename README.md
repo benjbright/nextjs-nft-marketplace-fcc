@@ -88,7 +88,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - Devchain proxy server settings - copy hardhat settings into ```frpc.ini```
 - ```cd frp``` and insert ```frpc.exe -c frpc.ini``` from Moralis docs
 
-- ```yarn moralis-admin-cli connect-local-devchain --moralisApiKey D0mkS4q1JJ7UNFJ --moralisApiSecret 4x6L0SDp2dht09j --frpcPath "C:\Users\benjb\Projects\nextjs-nft-marketplace-fcc\frp\frpc.exe"```
+- ```yarn moralis-admin-cli connect-local-devchain --moralisApiKey [insert] --moralisApiSecret [insert] --frpcPath "C:\Users\benjb\Projects\nextjs-nft-marketplace-fcc\frp\frpc.exe"```
 
 - As per the course run ```moralis-admin-cli connect-local-devchain --chain hardhat --moralisSubdomain zru39aagrwm9.usemoralis.com --frpcPath ./frp/frpc``` - this worked with the v0.40.0 package
 
@@ -100,6 +100,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - Moralis docs - Connect with SDK - this example uses Connect with Node.js
 - Also need to install ```yarn add --dev dotenv```
 - Run new front end script (99) in hardhat folder ```yarn hardhat deploy --network localhost --tags "frontend"```
+
+- Summary to set up
+    1. Run ```yarn dev``` to show in browser
+    2. Run ```yarn hardhat node``` in the ```hardhat-nft-marketplace-fcc``` folder
+    3. Run ```yarn moralis:sync``` in new terminal
+    4. Note - need the apiKey and apiSecret in the ```.env``` file
+    5. Note - script in the ```package.json``` file
 
 
 
