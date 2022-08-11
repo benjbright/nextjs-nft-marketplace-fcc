@@ -108,6 +108,40 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
     4. Note - need the apiKey and apiSecret in the ```.env``` file
     5. Note - script in the ```package.json``` file
 
+1:01:46 Event sync from code (under the connect with Node.js section)
+- https://v1docs.moralis.io/moralis-dapp/connect-the-sdk/connect-using-node#add-new-event-sync-from-code
+
+1:01:56
+- to run enter ```node addEvents.js```
+- to test whether the event sync is listening correctly - open up terminal in hardhat-nft-marketplace
+- run ```min-and-list.js``` on localhost
+- NOTE - make sure the Hardhat node is connected to the Moralis server
+- run ```yarn hardhat run .\scripts\mint-and-list.js --network localhost```
+- Should now see new itemListed entry in the Moralis database
+
+1:01:58 Resetting the local chain
+- If you close the Hardhat node and try to restart - need to Reset Local Devchain to update the Moralis Devchain Proxy Server
+
+1:02:00 Moralis Cloud Functions I
+- Note - if someone buys an NFT then it is no longer listed
+- So, how to update the Moralis server / database?
+- Can use Moralis Cloud Functions 
+- https://v1docs.moralis.io/moralis-dapp/cloud-code/cloud-functions
+- Add a new Moralis script to ```package.json```
+- Can run ```yarn moralis:cloud```
+- If run ```mint-and-list.js``` again should now see the logs in the server
+
+1:02:19 Practice resetting the local chain
+- Run through of closing down the terminal and resetting the local chain and server
+
+1:02:22 Moralis Cloud Functions II
+
+
+
+
+
+
+
 
 
 
