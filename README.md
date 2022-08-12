@@ -121,6 +121,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 1:01:58 Resetting the local chain
 - If you close the Hardhat node and try to restart - need to Reset Local Devchain to update the Moralis Devchain Proxy Server
+- NOTE - may need to Reset Local Devchain at the start of each new session
 
 1:02:00 Moralis Cloud Functions I
 - Note - if someone buys an NFT then it is no longer listed
@@ -133,8 +134,36 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 1:02:19 Practice resetting the local chain
 - Run through of closing down the terminal and resetting the local chain and server
+- To restart everything:
+    1. Start local development server ```yarn dev```
+    2. Start local blockchain node ```yarn hardhat node``` NOTE - in ```hardhat-nft-marketplace-fcc``` folder
+    3. Sync Moralis to local node ```yarn moralis:sync```
+    4. Check now connected in Moralis and don't forget to Reset Local Devchain
+    5. Old entries in the Moralis database are now from a blockchain that doesn't exist
+    6. Delete the rows in the ActiveItem / ItemListed fields (any others as well) - empty database
+    7. Run ```yarn moralis:cloud``` 
+    8. In the hardhat marketplace folder run ```yarn hardhat run .\scripts\mint-and-list.js --network localhost```
+    9. Should now see new ItemListed and ActiveItem in the Moralis database
 
 1:02:22 Moralis Cloud Functions II
+- After updating the ```addEvents.js``` script run ```yarn moralis:cloud``` to update the cloud function / database
+- Create a new ```cancel-item.js``` script in the hardhat-nft-marketplace-fcc folder
+- ```yarn hardhat run scripts/cancel-item.js --network localhost```
+- Then need another cloud function for Buying NFT's - again remember to upload / update the cloud 
+- Create a new ```buy-item.js``` script 
+- Note - make sure there is an NFT in the ActiveItems / Listing section of the database
+- Run ```yarn hardhat run scripts/buy-item.js --network localhost```
+- Note - this is one of the hardest sections of the course due to the number of technologies used
+- NOTE - remember that when you close your local blockchain node, need to delete all entries in the database
+
+1:02:42 Querying the Moralis database
+- Moralis docs https://www.npmjs.com/package/react-moralis
+- Hook called ```useMoralisQuery()``` - https://www.npmjs.com/package/react-moralis#usemoralisquery
+
+1:02:48 Rendering the NFT images
+
+
+
 
 
 
