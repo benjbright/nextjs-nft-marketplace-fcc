@@ -155,12 +155,30 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - Run ```yarn hardhat run scripts/buy-item.js --network localhost```
 - Note - this is one of the hardest sections of the course due to the number of technologies used
 - NOTE - remember that when you close your local blockchain node, need to delete all entries in the database
+- NOTE - remember the Moralis server is set to 'sleep' every three days so need to restart it in the legacy UI
 
 1:02:42 Querying the Moralis database
 - Moralis docs https://www.npmjs.com/package/react-moralis
 - Hook called ```useMoralisQuery()``` - https://www.npmjs.com/package/react-moralis#usemoralisquery
 
 1:02:48 Rendering the NFT images
+- Update the front end script in the hardhat folder
+- ```yarn hardhat deploy --tags "frontend" --network localhost```
+- Use an IPFS Gateway - a server that will return IPFS files from a "normal" URL
+- Note - could also render the image on the Moralis server and call the server
+- For testnets and main net -> use moralis server hooks
+
+1:03:04 IPFS
+- Had an error trying to run the IPFS links as per this section of the course
+- This was resolved by opening the IPFS desktop app in the background?
+
+1:03:05 NextJS image component
+- If use this image tag, cannot deploy the site statically (e.g. to IPFS)
+- Also use ```web3uikit``` ```<Card />``` component here
+
+
+
+
 
 
 
