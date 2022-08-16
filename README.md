@@ -47,6 +47,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
     - If not, you can buy the listing
 2. Sell Page:
     - You can list your NFT on the marketplace
+    - And then withdraw the proceeds
 
 - ```yarn add web3uikit moralis react-moralis```
 - import the MoralisProvider into ```_app.js```
@@ -175,6 +176,21 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 1:03:05 NextJS image component
 - If use this image tag, cannot deploy the site statically (e.g. to IPFS)
 - Also use ```web3uikit``` ```<Card />``` component here
+
+1:03:17 Update Listing Modal
+- use ```web3uikit``` modal component
+- Note - need to add the ```mine.js``` script in the hardhat folder to mine 2 blocks
+
+1:03:37 Buy NFT Listing
+
+1:03:40 Sell Page - listing NFTs for sale
+- create new script ```mint.js``` in hardhat folder
+- need to mint a new NFT but not list it 
+- ```yarn hardhat run .\scripts\mint.js --network localhost```
+
+1:03:56 Add in the withdraw functions from the Github repo
+
+
 
 
 
