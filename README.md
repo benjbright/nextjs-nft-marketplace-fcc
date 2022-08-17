@@ -190,6 +190,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 1:03:56 Add in the withdraw functions from the Github repo
 
+1:03:57 Part III The Graph front end
+- The Graph is a decentralized event indexer
+
 
 
 
